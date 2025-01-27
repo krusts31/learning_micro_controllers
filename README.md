@@ -72,6 +72,36 @@ daisy wiering:
 ![Daisy](images/daisy-chain.png "daisy missing img")
 
 
+### MOSI and MISO
+
+Data sent from master to slave is usually sent with least signigicant bit first.
+
+### Steps of SPI Data Transmission
+
+1. The master outputs the clock signal.
+2. The master sets SS/CS pin to low voltage with activates the slave.
+3. The master sends the data along MOSI line. The slave reads the bits as they are received.
+4. If a response is need the slave returns the data back to Master via MISO line 1 bit at a time.
+
+
+### Advantages and Disatvantages
+
+
+
+#### Advantages
+
+1. No start and stop bits, so the data can be streamed continuously without interruption
+2. No complicated slave addressing system like I2C
+3. Higher data transfer rate than I2C (almost twice as fast)
+4. Separate MISO and MOSI lines, so data can be sent and received at the same time
+
+#### Disadvantages
+
+1. Uses four wires (I2C and UARTs use two)
+2. No acknowledgement that the data has been successfully received (I2C has this)
+3. No form of error checking like the parity bit in UART
+4. Only allows for a single master
+
 ## I2C
 
 Inter-Itegrated-Circut
