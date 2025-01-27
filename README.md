@@ -61,6 +61,17 @@ Clock phase can be set for output and sampling to occure on either the first edg
 
 The master can select which slave it wants to talk to by setting the slaves CS/SS line to a low voltage level. In a idel state the slave select line is kept at a high voltage. Multiple SS/CS pins can be availabe on 1 master which allows for multiple slaves. If only ONE SS/CS pin is aivailable multiple slaves can be wired by using daisy-chaining.
 
+### MULTIPLE SLAVES
+
+Parralel wiering:
+
+![Parrale](images/paralle.png "parralel missing img")
+
+daisy wiering:
+
+![Daisy](images/daisy-chain.png "daisy missing img")
+
+
 ## I2C
 
 Inter-Itegrated-Circut
