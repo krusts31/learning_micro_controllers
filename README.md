@@ -1,5 +1,10 @@
 # Concepts
 
+## sources
+```
+https://www.circuitbasics.com
+```
+
 ## Serial vs Paralel comunicatoin
 
 _Paralel_ would be to connct all the
@@ -114,8 +119,26 @@ aysycnornos protocol.
 
 Works by seting a baud rate that bouth sides agree to.
 
-## Rising and Falling 
+Only needs 2 wires.
 
+It sends data from TX TO RX pin.
+
+Uses start and stop bits.
+
+Does not need clock.
+
+When a device detects a start bit it starts to record data with a specifc baud rate.
+
+Baudrate is expersed in bit per second (bps).
+
+Boath UARTS can differ in baud rate only about 10% before the timing bits get to far off.
+
+Max Masters:    1
+Max Slaves:     1
+Maximum speed:  115200
+Usuall speed:   9600
+
+## Rising and Falling 
 
 When a voltage rises above 3.3 or 5V it is considered rising edge volate and would be encoded as 1 in GPIO.
 
